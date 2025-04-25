@@ -1,0 +1,15 @@
+{
+  "name": "electron-app",
+  "version": "1.0.0",
+  "description": "Electron main process for Vue-Express desktop app",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Midhun",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^35.2.1"
+  }
+}

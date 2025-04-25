@@ -6,7 +6,8 @@ import { dirname } from 'path';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-const isDev = process.env.NODE_ENV === 'development';
+const isDev = process.env.NODE_ENV === 'development'; 
+// is Dev=true make uncomment 
 
 function createWindow() {
   const mainWindow = new BrowserWindow({

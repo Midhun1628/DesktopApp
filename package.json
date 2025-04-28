@@ -1,0 +1,20 @@
+{
+  "name": "electron-vue-express-app",
+  "version": "1.0.0",
+  "description": "A desktop app using Electron, Vue, Express, and MySQL",
+  "main": "electron/main.js",
+  "scripts": {
+    "start": "concurrently \"npm run start-backend\" \"npm run start-frontend\" \"npm run start-electron\"",
+    "start-backend": "cd server && npm run dev",
+    "start-frontend": "cd client/frontend && npm run dev",
+    "start-electron": "wait-on http://localhost:5173 && cross-env NODE_ENV=development electron electron/main.js"
+  },
+  "author": "Midhun",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "cross-env": "^7.0.3",
+    "electron": "^30.0.0",
+    "wait-on": "^8.0.3"
+  }
+}

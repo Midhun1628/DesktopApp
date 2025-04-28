@@ -1,0 +1,44 @@
+{
+  "name": "electron-app",
+  "version": "1.0.0",
+  "description": "Electron main process for Vue-Express desktop app",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "author": "Midhun",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^35.2.1",
+    "electron-builder": "^24.6.0"
+  },
+  "build": {
+    "appId": "com.midhun.desktopapp",
+    "productName": "VueExpressApp",
+    "directories": {
+      "buildResources": "assets",       
+      "output": "../dist"
+    },
+    "files": [
+      "**/*", 
+      "!node_modules/*/{CHANGELOG.md,README.md,README,readme.md,readme}",
+      "!**/node_modules/*/{test,__tests__}/**",
+      "!**/*.map"
+    ],
+    "extraResources": [
+      {
+        "from": "../server",
+        "to": "server"
+      },
+      {
+        "from": "../client/dist",
+        "to": "frontend"
+      }
+    ],
+    "win": {
+      "target": "nsis"
+    }
+  }
+}

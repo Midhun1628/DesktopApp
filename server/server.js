@@ -33,6 +33,8 @@ const  startServer =   async () => {
   }
 };
 
+startServer()
+
 // Register user
 app.post('/api/register', async (req, res) => {
   const { username, email, password } = req.body;
